@@ -1,11 +1,11 @@
 # Hello_Flask
-This project is a way to run on [AWS](https://aws.amazon.com/) a minimal Python [Flask](http://flask.pocoo.org/docs/0.12/quickstart/) application which displays the classical `"Hello World!"` in a browser. Its architecture is based on a  EC2 instance which is created with [terraform](https://terraform.io).
+This project is a way to run on <a href="https://aws.amazon.com/" target="_blank">AWS</a> a minimal Python <a href="http://flask.pocoo.org/docs/0.12/quickstart/" target="_blank">Flask</a> application which displays the classical `"Hello World!"` in a browser. Its architecture is based on a  EC2 instance which is created with <a href="https://terraform.io" target="_blank">terraform</a>.
 
 ### Requirements
 
 To run this project, you need:
-- a AWS account (you can use a [free tier](https://aws.amazon.com/free/) account)
-- [terraform](https://www.terraform.io/downloads.html) installed on your machine
+- a AWS account (you can use a <a href="(https://aws.amazon.com/free/" target="_blank">free tier</a> account)
+- <a href="(https://www.terraform.io/downloads.html" target="_blank">terraform</a> installed on your machine
 
 ### Process
 
@@ -93,6 +93,6 @@ $ terraform destroy --force
 
 ### Improvements
 
-This project is based on one simple instance. For a *production* environment, it should be better to use a load balancer ([ELB](https://aws.amazon.com/elasticloadbalancing/)) with multiple instances and an autoscaler. 
+This project is based on one simple instance. For a *production* environment, it should be better to use a load balancer (<a href="(https://aws.amazon.com/elasticloadbalancing/" target="_blank">ELB</a>) with multiple instances and an autoscaler. 
 
 The Nginx proxy pass and the Flask application could also be run on separate instances or containers.
