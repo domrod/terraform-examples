@@ -13,7 +13,7 @@ app_ip=$(terraform output | grep $key | awk '{print $3}')
 test=$(curl -s http://${app_ip})
 
 if [  "$test" == "$chain" ]; then
-printf " ${GREEN}\u2611${NORMAL}Ok\n"
+printf " ${GREEN}\u2611 Ok${NORMAL}\n"
 else
-printf " ${RED}\u2610${NORMAL}Nok\n"
+printf " ${RED}\u2610 Nok${NORMAL}\n"
 fi
