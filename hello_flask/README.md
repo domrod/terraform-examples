@@ -4,8 +4,8 @@ This project is a way to run on <a href="https://aws.amazon.com/" target="_blank
 ### Requirements
 
 To run this project, you need:
-- a AWS account (you can use a <a href="(https://aws.amazon.com/free/" target="_blank">free tier</a> account)
-- <a href="(https://www.terraform.io/downloads.html" target="_blank">terraform</a> installed on your machine
+- a AWS account (you can use a <a href="https://aws.amazon.com/free/" target="_blank">free tier</a> account)
+- <a href="https://www.terraform.io/downloads.html" target="_blank">terraform</a> installed on your machine
 
 ### Process
 
@@ -93,6 +93,6 @@ $ terraform destroy --force
 
 ### Improvements
 
-This project is based on one simple instance. For a *production* environment, it should be better to use a load balancer (<a href="(https://aws.amazon.com/elasticloadbalancing/" target="_blank">ELB</a>) with multiple instances and an autoscaler. 
+This project is based on one simple instance. For a *production* environment, it should be better to use a load balancer (<a href="https://aws.amazon.com/elasticloadbalancing/" target="_blank">ELB</a>) with multiple instances and an autoscaler. 
 
 The Nginx proxy pass and the Flask application could also be run on separate instances or containers.
