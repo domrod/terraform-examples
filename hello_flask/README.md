@@ -26,7 +26,7 @@ $ cp terraform.tfvars.example terraform.tfvars
 
 and edit `terraform.tfvars` to use your own AWS credentials and your AWS preferred region (I use `eu-west-3` by default which is Paris).
 
-Create a local SSH key pair.
+Create a local SSH key pair (don't enter a passphrase).
 
 ```
 $ ssh-keygen -t rsa -b 4096 -C "My Hello Flask key" -f hello_id_rsa
@@ -53,4 +53,39 @@ When you are ready to go, apply your changes to run the project on AWS.
 
 ```
 $ terraform apply
+```
+
+If everything went well, you should have a final output as the following.
+```
+...
+Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+hello_flask_ip = 35.180.73.52
+vpc_id = vpc-02b9336b
+
+```
+
+#### Final check
+
+You can check tha everything works with a browser or with `curl`. For instance, with the previous provided IP, we get:
+
+```
+$ curl http://35.180.73.52
+Hello, World!
+```  
+
+To implement a test, you can use `terraform output` with the following script
+```
+
+```
+
+#### To delete your project
+
+If you are testing and want to stop the project running on AWS, just type the following command.
+
+
+```
+$ terraform destroy --force
 ```
