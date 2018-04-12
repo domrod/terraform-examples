@@ -3,7 +3,6 @@ package_upgrade: true
 packages:
   - nginx
   - python-pip
-# Cloud config for gitlab server
 repo_update: true
 repo_upgrade: all
 
