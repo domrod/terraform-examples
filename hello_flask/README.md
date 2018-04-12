@@ -69,7 +69,7 @@ vpc_id = vpc-02b9336b
 
 #### Final check
 
-You can check tha everything works with a browser or with `curl`. For instance, with the previous provided IP, we get:
+You can check that everything works with a browser or with `curl`. For instance, with the previous provided IP, we get:
 
 ```
 $ curl http://35.180.73.52
@@ -91,7 +91,7 @@ If you are testing and want to stop the project running on AWS, just type the fo
 $ terraform destroy --force
 ```
 
-### Improvments
+### Improvements
 
 This project is based on one simple instance. For a *production* environment, it should be better to use a load balancer ([ELB](https://aws.amazon.com/elasticloadbalancing/)) with multiple instances and an autoscaler. 
 
