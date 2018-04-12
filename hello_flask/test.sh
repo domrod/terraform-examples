@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+NORMAL=$(tput sgr0)
 
 app=hello_flask
 key="${hello_flask}_ip"
@@ -10,7 +13,7 @@ app_ip=$(terraform output | grep $key | awk '{print $3}')
 test=$(curl -s http://${app_ip})
 
 if [  "$test" == "$chain" ]; then
-echo "Ok"
+printf " ${GREEN}\u2611${NORMAL}Ok\n"
 else
-echo "Nok"
+printf " ${RED}\u2610${NORMAL}Nok\n"
 fi
