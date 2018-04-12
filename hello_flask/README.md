@@ -78,7 +78,8 @@ Hello, World!
 
 To implement a test, you can use `terraform output` with the following script
 ```
-
+$ ./test.sh
+ ☑ Ok
 ```
 
 #### To delete your project
@@ -89,3 +90,9 @@ If you are testing and want to stop the project running on AWS, just type the fo
 ```
 $ terraform destroy --force
 ```
+
+### Improvments
+
+This project is based on one simple instance. For a *production* environment, it should be better to use a load balancer ([ELB](https://aws.amazon.com/elasticloadbalancing/)) with multiple instances and an autoscaler. 
+
+The Nginx proxy pass and the Flask application could also be run on separate instances or containers.
